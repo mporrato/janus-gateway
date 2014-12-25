@@ -59,34 +59,37 @@ CLEANFILES += conf/janus.cfg.sample
 # Janus
 ##
 
-janus_SOURCES = \
-	apierror.c \
+nobase_pkginclude_HEADERS = \
 	apierror.h \
-	cmdline.c \
 	cmdline.h \
-	config.c \
 	config.h \
 	debug.h \
-	dtls.c \
 	dtls.h \
-	ice.c \
 	ice.h \
-	janus.c \
 	janus.h \
 	mutex.h \
-	record.c \
 	record.h \
-	rtcp.c \
 	rtcp.h \
 	rtp.h \
-	sctp.c \
 	sctp.h \
-	sdp.c \
 	sdp.h \
-	utils.c \
 	utils.h \
-	plugins/plugin.c \
 	plugins/plugin.h \
+	$(NULL)
+
+janus_SOURCES = \
+	apierror.c \
+	cmdline.c \
+	config.c \
+	dtls.c \
+	ice.c \
+	janus.c \
+	record.c \
+	rtcp.c \
+	sctp.c \
+	sdp.c \
+	utils.c \
+	plugins/plugin.c \
 	$(NULL)
 
 janus_CFLAGS = \
